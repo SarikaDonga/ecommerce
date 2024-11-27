@@ -1,23 +1,18 @@
 import React from 'react'
-import productData from '../assets/ProductData'
-import ProductCard from './ProductCard'
+import Product from './Product'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
 
-  
+
   return (
-    <div className='d-flex'>
+    <div >
 
-      {
-        productData.map((product,index)=>(
-          <div key={product.id}>
-            <ProductCard product={product}/>
+      <Link to="/add">Add Product</Link>
 
-          </div>
-        ))
-      }
-
+      <Product />
 
 
     </div>
