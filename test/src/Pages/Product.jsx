@@ -4,7 +4,8 @@ import productData from '../assets/ProductData'
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-const Product = () => {
+const Product = ({ products }) => {
+  
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(1000);
@@ -63,18 +64,6 @@ const Product = () => {
           </label>
         </div>
 
-
-      {/* Serching  By name */}
-      {/* <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
-        {filteredProducts.length > 0 ? (
-
-          filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))
-        ) : (
-          <p>No products found.</p>
-        )}
-      </div> */}
 
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>

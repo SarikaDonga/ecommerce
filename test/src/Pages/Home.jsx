@@ -1,19 +1,14 @@
 import React from 'react'
 import Product from './Product'
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-
 const Home = () => {
 
 
   return (
-    <div >
-
+   
+      <div>
       <Link to="/add">Add Product</Link>
-
-      <Product />
-
+      <Product/> 
 
     </div>
   )
